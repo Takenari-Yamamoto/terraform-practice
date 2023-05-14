@@ -10,3 +10,7 @@ tf-init:
 # terraform planコマンドは、Terraformが何を行うかをプレビュー
 tf-plan:
 	terraform plan
+
+# 実際にリソースを作成
+tf-apply:
+	terraform apply
