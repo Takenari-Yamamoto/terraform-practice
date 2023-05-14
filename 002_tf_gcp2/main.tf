@@ -13,3 +13,16 @@ provider "google" {
   region      = var.region
   zone        = var.zone
 }
+
+module "vpc" {
+  source     = "./vpc"
+  project_id = var.project_id
+}
+
+# module "cloud_sql" {
+#   source = "./cloud_sql"
+# }
+
+# module "cloud_run" {
+#   source = "./cloud_run"
+# }
