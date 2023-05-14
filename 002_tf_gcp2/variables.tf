@@ -18,5 +18,5 @@ variable "zone" {
 variable "credentials" {
   description = "クレデンシャルやで"
   type        = string
-  default     = "/Users/takenariyamamoto/dev/infra-practice/002_tf_gcp2/.config/gcp_credential.json"
+  default     = ".config/gcp_credential.json"
 }
