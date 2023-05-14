@@ -19,9 +19,12 @@ module "vpc" {
   project_id = var.project_id
 }
 
-# module "cloud_sql" {
-#   source = "./cloud_sql"
-# }
+module "cloud_sql" {
+  source            = "./cloud_sql"
+  project_id        = var.project_id
+  region            = var.region
+  network_self_link = module.vpc.network_self_link
+}
 
 # module "cloud_run" {
 #   source = "./cloud_run"

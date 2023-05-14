@@ -1,5 +1,6 @@
 variable "project_id" {
   description = "golang-project-377611"
+  default     = "golang-project-377611"
   type        = string
 }
 
