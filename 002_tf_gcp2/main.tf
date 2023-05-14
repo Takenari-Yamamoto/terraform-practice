@@ -26,6 +26,11 @@ module "cloud_sql" {
   network_self_link = module.vpc.network_self_link
 }
 
-# module "cloud_run" {
-#   source = "./cloud_run"
-# }
+module "cloud_run" {
+  source             = "./cloud_run"
+  project_id         = var.project_id
+  region             = var.region
+  network_name       = module.vpc.network_name
+  vpc_connector_name = "my-vpc-connector"
+  ip_cidr_range      = "10.8.0.0/28"
+}
