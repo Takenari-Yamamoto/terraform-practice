@@ -1,9 +1,11 @@
 resource "google_sql_database_instance" "default" {
-  name             = "my-db-instance"
-  project          = var.project_id
-  region           = var.region
-  database_version = "POSTGRES_12"
-  depends_on       = [google_service_networking_connection.private_vpc_connection]
+  name                = "my-db-instance"
+  project             = var.project_id
+  region              = var.region
+  database_version    = "POSTGRES_12"
+  depends_on          = [google_service_networking_connection.private_vpc_connection]
+  deletion_protection = false
+
 
   settings {
     tier = "db-f1-micro"
@@ -12,6 +14,7 @@ resource "google_sql_database_instance" "default" {
       ipv4_enabled    = false
       private_network = var.network_self_link
     }
+
   }
 }
 
