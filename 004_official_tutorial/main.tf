@@ -10,7 +10,7 @@ terraform {
 provider "google" {
   credentials = file("/Users/takenariyamamoto/Downloads/golang-project-377611-721f9059e7d8.json")
 
-  project = "golang-project-377611"
+  project = var.project
   region  = "us-central1"
   zone    = "us-central1-c"
 }
