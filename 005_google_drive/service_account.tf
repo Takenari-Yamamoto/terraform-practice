@@ -3,3 +3,4 @@ resource "google_service_account" "drive_manager" {
   display_name = "Google Drive Manager"
   description  = "Service account for managing Google Drive operations"
 }
+
