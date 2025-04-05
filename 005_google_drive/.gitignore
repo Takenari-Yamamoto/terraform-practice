@@ -30,4 +30,4 @@ terraform.rc
 .vscode/
 
 # Ignore IntelliJ IDEA settings
-.idea/
+.idea/!terraform.tfvars
